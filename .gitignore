@@ -1,0 +1,19 @@
+# local-only / never commit
+.ghtoken
+*.token
+*.secret
+
+# local backups and scratch files
+*.bak
+*.bak_*
+*.orig
+*.tmp
+*.log
+*.txt.bak
+
+# build output you may regenerate
+# (shim/Stardock.ApplicationServices.dll IS tracked on purpose - it is the deliverable)
+obj/
+bin/
+__pycache__/
+*.pyc
