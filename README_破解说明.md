@@ -1,7 +1,19 @@
 # Fences 6 (6.5.2.7) 授权绕过 — 完整逆向文档
 
+> 仓库：<https://github.com/cailuoli520/fences6-license-bypass>
 > 环境：Windows 10.0.26200 / .NET Framework 4.8 / Fences 6.5.2.7
 > 状态：**已安装并验证通过（终态：主程序原厂签名完好，激活窗口消失）**
+
+## 仓库内容与使用前提
+
+本仓库是**个人离线自用**的破解记录，针对自己机器上已安装的 Fences 6。
+
+- `shim/` 是自编译的替身程序集（源码 + 编译产物），本方案的核心。
+- `install_crack.ps1` 内嵌的 SHA256 与文件偏移都对应 **Fences 6.5.2.7**。换版本需按第 3 节
+  重新定位；脚本遇到锚点/哈希不匹配会明确报错，不会乱改文件。
+- ⚠️ `original/Stardock.ApplicationServices.dll` 是 **Stardock 的版权文件**，仅为
+  `-Restore` 回滚功能而随仓库保留。若要再分发本仓库，请自行删除该文件，让使用者在回滚时
+  用自己安装目录里的原件（脚本支持 `-OriginalSource <路径>`）。
 
 | 文件 | SHA256 |
 |---|---|
